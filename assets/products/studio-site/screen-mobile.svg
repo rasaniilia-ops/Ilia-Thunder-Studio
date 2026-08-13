@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900">
+      <stop stop-color="#07101f"/>
+      <stop offset="1" stop-color="#122b4e"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="30" stdDeviation="30" flood-opacity=".5"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="350" cy="130" r="300" fill="#57e9ff" opacity=".06"/>
+  <circle cx="1300" cy="780" r="380" fill="#9b7aff" opacity=".07"/>
+  <g filter="url(#shadow)">
+    <rect x="585" y="35" width="430" height="830" rx="62" fill="#02050b"/>
+    <rect x="604" y="54" width="392" height="792" rx="47" fill="#050914" stroke="#9fd7ff" stroke-opacity=".18"/>
+    <rect x="724" y="68" width="152" height="24" rx="12" fill="#02050b"/>
+    <rect x="624" y="112" width="352" height="58" rx="14" fill="#08111f" stroke="#9fd7ff" stroke-opacity=".15"/>
+    <path d="m650 124-19 25h12l-1 17 20-27h-12v-15Z" fill="#57e9ff"/>
+    <text x="674" y="142" fill="#eef6ff" font-family="Arial" font-size="10" font-weight="800">ILIA THUNDER</text>
+    <text x="674" y="156" fill="#718099" font-family="Arial" font-size="6" font-weight="700" letter-spacing="3">STUDIO</text>
+    <rect x="829" y="121" width="132" height="40" rx="9" fill="#0e1b2e"/>
+    <rect x="835" y="126" width="58" height="30" rx="7" fill="#57e9ff"/>
+    <text x="844" y="145" fill="#06111d" font-family="Arial" font-size="8" font-weight="700">English</text>
+    <text x="916" y="145" fill="#eef6ff" font-family="Arial" font-size="8" font-weight="700">فارسی</text>
+    <circle cx="638" cy="218" r="3" fill="#b6ff68"/>
+    <text x="650" y="221" fill="#57e9ff" font-family="Arial" font-size="7" font-weight="700" letter-spacing="1">INDEPENDENT CREATIVE STUDIO</text>
+    <text x="631" y="285" fill="#eef6ff" font-family="Arial" font-size="48" font-weight="900" letter-spacing="-3">Ideas with</text>
+    <text x="631" y="331" fill="#eef6ff" font-family="Arial" font-size="48" font-weight="900" letter-spacing="-3">energy.</text>
+    <text x="631" y="382" fill="#57e9ff" font-family="Arial" font-size="45" font-weight="900" letter-spacing="-3">Products with</text>
+    <text x="631" y="428" fill="#7777ff" font-family="Arial" font-size="45" font-weight="900" letter-spacing="-3">purpose.</text>
+    <text x="632" y="473" fill="#a8b6ca" font-family="Arial" font-size="11">Games, websites, apps, and useful digital</text>
+    <text x="632" y="492" fill="#a8b6ca" font-family="Arial" font-size="11">experiments designed by Ilia Rasani.</text>
+    <rect x="632" y="528" width="143" height="44" rx="10" fill="#57e9ff"/>
+    <text x="653" y="555" fill="#06111d" font-family="Arial" font-size="11" font-weight="800">Explore the work</text>
+    <circle cx="803" cy="680" r="110" fill="none" stroke="#57e9ff" stroke-opacity=".2"/>
+    <circle cx="803" cy="680" r="74" fill="none" stroke="#57e9ff" stroke-opacity=".25" stroke-dasharray="4 8"/>
+    <rect x="749" y="626" width="108" height="108" rx="28" fill="#0d1d33" stroke="#57e9ff" stroke-opacity=".3" transform="rotate(45 803 680)"/>
+    <path d="m814 628-51 66h34l-3 51 50-70h-33l3-47Z" fill="#57e9ff"/>
+  </g>
+  <text x="113" y="366" fill="#eef6ff" font-family="Arial" font-size="54" font-weight="900">Designed for every screen.</text>
+  <text x="117" y="415" fill="#a8b6ca" font-family="Arial" font-size="21">Responsive layout. Clear language switch.</text>
+  <text x="117" y="448" fill="#a8b6ca" font-family="Arial" font-size="21">Fast, focused, and accessible.</text>
+</svg>

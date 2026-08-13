@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900">
+      <stop stop-color="#050914"/>
+      <stop offset="1" stop-color="#102643"/>
+    </linearGradient>
+    <linearGradient id="text" x1="130" y1="280" x2="820" y2="600">
+      <stop stop-color="#57e9ff"/>
+      <stop offset="1" stop-color="#9b7aff"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="45"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".1" stroke="#c4e5ff">
+    <path d="M0 90h1600M0 180h1600M0 270h1600M0 360h1600M0 450h1600M0 540h1600M0 630h1600M0 720h1600M0 810h1600"/>
+    <path d="M100 0v900M200 0v900M300 0v900M400 0v900M500 0v900M600 0v900M700 0v900M800 0v900M900 0v900M1000 0v900M1100 0v900M1200 0v900M1300 0v900M1400 0v900M1500 0v900"/>
+  </g>
+  <ellipse cx="1240" cy="430" rx="290" ry="290" fill="#287fda" opacity=".16" filter="url(#blur)"/>
+  <rect x="70" y="38" width="1460" height="76" rx="18" fill="#08111f" fill-opacity=".88" stroke="#9fd7ff" stroke-opacity=".18"/>
+  <path d="m112 56-23 30h15l-1 22 24-33h-15V56Z" fill="#57e9ff"/>
+  <text x="143" y="79" fill="#eef6ff" font-family="Arial" font-size="17" font-weight="800">ILIA THUNDER</text>
+  <text x="143" y="99" fill="#718099" font-family="Arial" font-size="10" font-weight="700" letter-spacing="5">STUDIO</text>
+  <g fill="#a8b6ca" font-family="Arial" font-size="14">
+    <text x="650" y="84">Work</text><text x="730" y="84">About</text><text x="810" y="84">Approach</text><text x="915" y="84">Contact</text>
+  </g>
+  <rect x="1290" y="53" width="210" height="46" rx="12" fill="#0d1a2d" stroke="#57e9ff" stroke-opacity=".3"/>
+  <rect x="1300" y="59" width="92" height="34" rx="8" fill="#57e9ff"/>
+  <text x="1319" y="81" fill="#06111d" font-family="Arial" font-size="12" font-weight="700">English</text>
+  <text x="1422" y="81" fill="#eef6ff" font-family="Arial" font-size="12" font-weight="700">فارسی</text>
+  <circle cx="134" cy="229" r="5" fill="#b6ff68"/>
+  <text x="154" y="235" fill="#57e9ff" font-family="Arial" font-size="14" font-weight="700" letter-spacing="2">INDEPENDENT CREATIVE TECHNOLOGY STUDIO</text>
+  <text x="125" y="390" fill="#eef6ff" font-family="Arial" font-size="104" font-weight="900" letter-spacing="-7">Ideas with energy.</text>
+  <text x="125" y="505" fill="url(#text)" font-family="Arial" font-size="104" font-weight="900" letter-spacing="-7">Products with purpose.</text>
+  <text x="130" y="578" fill="#a8b6ca" font-family="Arial" font-size="23">Games, websites, apps, and useful digital experiments</text>
+  <text x="130" y="610" fill="#a8b6ca" font-family="Arial" font-size="23">designed and built by Ilia Rasani.</text>
+  <rect x="130" y="666" width="193" height="58" rx="12" fill="#57e9ff"/>
+  <text x="159" y="702" fill="#06111d" font-family="Arial" font-size="16" font-weight="800">Explore the work</text>
+  <circle cx="1240" cy="427" r="265" fill="none" stroke="#57e9ff" stroke-opacity=".22"/>
+  <circle cx="1240" cy="427" r="178" fill="none" stroke="#57e9ff" stroke-opacity=".28" stroke-dasharray="6 13"/>
+  <rect x="1126" y="313" width="228" height="228" rx="55" fill="#0d1d33" stroke="#57e9ff" stroke-opacity=".3" transform="rotate(45 1240 427)"/>
+  <path d="m1262 322-104 133h68l-4 105 102-142h-66l4-96Z" fill="#57e9ff"/>
+</svg>
