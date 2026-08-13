@@ -17,6 +17,14 @@
     <meta property="og:image" content="assets/brand/social-card.svg" />
     <title>Ilia Thunder Studio</title>
     <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ilia-thunder-theme") === "light" ? "light" : "dark";
+      } catch {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <script src="site-config.js" defer></script>
     <script src="products.js" defer></script>
@@ -44,15 +52,29 @@
           <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
 
-        <div class="language-switcher" role="group" aria-label="Language / زبان">
-          <span class="language-globe" aria-hidden="true">◎</span>
-          <button class="language-option is-active" type="button" data-language="en" lang="en">
-            English
-          </button>
-          <span class="language-divider" aria-hidden="true">/</span>
-          <button class="language-option" type="button" data-language="fa" lang="fa">
-            فارسی
-          </button>
+        <div class="header-controls">
+          <div class="theme-switcher" role="group" aria-label="Theme / پوسته">
+            <span class="control-icon" aria-hidden="true">◐</span>
+            <button class="theme-option is-active" type="button" data-theme-option="dark">
+              <span class="theme-symbol" aria-hidden="true">☾</span>
+              <span class="theme-label" data-i18n="darkTheme">Dark</span>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="light">
+              <span class="theme-symbol" aria-hidden="true">☀</span>
+              <span class="theme-label" data-i18n="lightTheme">Light</span>
+            </button>
+          </div>
+
+          <div class="language-switcher" role="group" aria-label="Language / زبان">
+            <span class="language-globe" aria-hidden="true">◎</span>
+            <button class="language-option is-active" type="button" data-language="en" lang="en">
+              English
+            </button>
+            <span class="language-divider" aria-hidden="true">/</span>
+            <button class="language-option" type="button" data-language="fa" lang="fa">
+              فارسی
+            </button>
+          </div>
         </div>
       </header>
 
@@ -226,7 +248,7 @@
               <div class="signature-block">
                 <div class="signature-mark">IR</div>
                 <div>
-                  <strong>Ilia Rasani</strong>
+                  <strong data-i18n="founderName">Ilia Rasani</strong>
                   <span data-i18n="founderRole">Founder &amp; Creator</span>
                 </div>
               </div>
@@ -282,7 +304,7 @@
           </span>
         </a>
         <p>
-          © <span id="current-year"></span> Ilia Rasani.
+          © <span id="current-year"></span> <span data-i18n="founderName">Ilia Rasani</span>.
           <span data-i18n="rights">All rights reserved.</span>
         </p>
         <a href="#top" class="back-to-top">

@@ -18,7 +18,7 @@ window.STUDIO_PRODUCTS = [
     status: "released",
     name: {
       en: "Ilia Thunder Studio",
-      fa: "استودیو ایلیا تاندر"
+      fa: "استودیو ایلیا تندر"
     },
     tagline: {
       en: "A bilingual home for independent digital work.",
@@ -30,7 +30,7 @@ window.STUDIO_PRODUCTS = [
         "The experience is built for both English and Persian readers, with right-to-left support, accessible controls, responsive layouts, project search, category filters, and detailed product pages."
       ],
       fa: [
-        "وب‌سایت رسمی استودیو ایلیا تاندر؛ جایی متمرکز و ساده برای نمایش بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها، ابزارها و تجربه‌های خلاقانه.",
+        "وب‌سایت رسمی استودیو ایلیا تندر؛ جایی متمرکز و ساده برای نمایش بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها، ابزارها و تجربه‌های خلاقانه.",
         "این تجربه برای کاربران فارسی و انگلیسی ساخته شده و از چیدمان راست‌به‌چپ، کنترل‌های دسترس‌پذیر، طراحی واکنش‌گرا، جست‌وجوی پروژه، فیلتر دسته‌بندی و صفحه کامل هر محصول پشتیبانی می‌کند."
       ]
     },
@@ -40,7 +40,7 @@ window.STUDIO_PRODUCTS = [
         src: "assets/products/studio-site/screen-home.svg",
         alt: {
           en: "Ilia Thunder Studio home page concept",
-          fa: "نمای صفحه اصلی استودیو ایلیا تاندر"
+          fa: "نمای صفحه اصلی استودیو ایلیا تندر"
         }
       },
       {

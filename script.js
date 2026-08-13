@@ -12,6 +12,8 @@
       navAbout: "About",
       navPrinciples: "Approach",
       navContact: "Contact",
+      darkTheme: "Dark",
+      lightTheme: "Light",
       heroEyebrow: "Independent creative technology studio",
       heroLineOne: "Ideas with energy.",
       heroLineTwo: "Products with purpose.",
@@ -49,6 +51,7 @@
       aboutLead: "Ilia Thunder Studio is the independent creative studio of Ilia Rasani.",
       aboutText:
         "Every project begins with a useful or exciting idea, then gets shaped through design, code, testing, and careful refinement. The goal is simple: make digital things people enjoy using.",
+      founderName: "Ilia Rasani",
       founderRole: "Founder & Creator",
       principlesLabel: "APPROACH",
       principlesTitle: "How the work gets better.",
@@ -88,20 +91,22 @@
       imageCount: (current, total) => `Image ${current} of ${total}`
     },
     fa: {
-      documentTitle: "استودیو ایلیا تاندر",
+      documentTitle: "استودیو ایلیا تندر",
       metaDescription:
-        "استودیو ایلیا تاندر — بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها، ابزارها و تجربه‌های مستقل ساخته ایلیا راسانی.",
+        "استودیو ایلیا تندر — بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها، ابزارها و تجربه‌های مستقل ساخته ایلیا رسنی.",
       skipLink: "رفتن به محتوای اصلی",
       studio: "استودیو",
       navWork: "آثار",
       navAbout: "درباره",
       navPrinciples: "رویکرد",
       navContact: "ارتباط",
+      darkTheme: "تاریک",
+      lightTheme: "روشن",
       heroEyebrow: "استودیوی مستقل فناوری خلاق",
       heroLineOne: "ایده‌های پرانرژی.",
       heroLineTwo: "محصولات هدفمند.",
       heroDescription:
-        "بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها و تجربه‌های دیجیتال کاربردی؛ طراحی و ساخته‌شده توسط ایلیا راسانی.",
+        "بازی‌ها، وب‌سایت‌ها، اپلیکیشن‌ها و تجربه‌های دیجیتال کاربردی؛ طراحی و ساخته‌شده توسط ایلیا رسنی.",
       exploreWork: "دیدن آثار",
       meetStudio: "آشنایی با استودیو",
       signalBuild: "ساختن",
@@ -131,9 +136,10 @@
       aboutLabel: "درباره",
       aboutTitleOne: "استودیوی کوچک.",
       aboutTitleTwo: "ساخت حرفه‌ای.",
-      aboutLead: "استودیو ایلیا تاندر، استودیوی خلاق مستقل ایلیا راسانی است.",
+      aboutLead: "استودیو ایلیا تندر، استودیوی خلاق مستقل ایلیا رسنی است.",
       aboutText:
         "هر پروژه با یک ایده کاربردی یا هیجان‌انگیز آغاز می‌شود و با طراحی، کدنویسی، آزمایش و بهبود دقیق شکل می‌گیرد. هدف ساده است: ساخت محصولات دیجیتالی که مردم از استفاده‌شان لذت ببرند.",
+      founderName: "ایلیا رسنی",
       founderRole: "بنیان‌گذار و سازنده",
       principlesLabel: "رویکرد",
       principlesTitle: "چطور کار بهتر می‌شود.",
@@ -180,6 +186,7 @@
 
   const state = {
     language: getInitialLanguage(),
+    theme: getInitialTheme(),
     category: "all",
     search: "",
     activeProjectId: null,
@@ -205,6 +212,10 @@
     if (saved === "en" || saved === "fa") return saved;
     if (config.defaultLanguage === "fa") return "fa";
     return navigator.language.toLowerCase().startsWith("fa") ? "fa" : "en";
+  }
+
+  function getInitialTheme() {
+    return localStorage.getItem("ilia-thunder-theme") === "light" ? "light" : "dark";
   }
 
   function text(value) {
@@ -244,6 +255,12 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
+    document.querySelectorAll("[data-theme-option]").forEach((button) => {
+      const label = t(`${button.dataset.themeOption}Theme`);
+      button.setAttribute("aria-label", label);
+      button.setAttribute("title", label);
+    });
+
     elements.closeDialog?.setAttribute("aria-label", t("close"));
     renderFilters();
     renderProjects();
@@ -253,6 +270,22 @@
       const product = products.find((item) => item.id === state.activeProjectId);
       if (product) renderDialog(product);
     }
+  }
+
+  function setTheme(theme) {
+    if (theme !== "dark" && theme !== "light") return;
+    state.theme = theme;
+    localStorage.setItem("ilia-thunder-theme", theme);
+    elements.html.dataset.theme = theme;
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", theme === "light" ? "#f4f7fb" : "#07101f");
+
+    document.querySelectorAll("[data-theme-option]").forEach((button) => {
+      const active = button.dataset.themeOption === theme;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
   }
 
   function availableCategories() {
@@ -570,6 +603,10 @@
     button.addEventListener("click", () => setLanguage(button.dataset.language));
   });
 
+  document.querySelectorAll("[data-theme-option]").forEach((button) => {
+    button.addEventListener("click", () => setTheme(button.dataset.themeOption));
+  });
+
   elements.filters.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) return;
@@ -602,6 +639,7 @@
   });
 
   document.querySelector("#current-year").textContent = new Date().getFullYear();
+  setTheme(state.theme);
   setLanguage(state.language);
   observeRevealElements();
   requestAnimationFrame(openProjectFromUrl);
